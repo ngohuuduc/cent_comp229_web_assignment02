@@ -16,7 +16,7 @@ db.once('open',(error) => console.log('connected to DB !!') )
 app.use(express.json())
 
 const productsRouter = require('./routes/products')
-app.use('/products',productsRouter)
+app.use('/api/products',productsRouter)
 
 
 
