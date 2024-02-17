@@ -1,4 +1,4 @@
-const mongoose = require('express')
+const mongoose = require('mongoose')
 
 const productsSchema = new mongoose.Schema({
     product: {
@@ -10,12 +10,12 @@ const productsSchema = new mongoose.Schema({
         required : true
     },
     price: {
-        type: double,
+        type: String,
         required : true,
         default: 0.0
     },
     quantity: {
-        type: double,
+        type: String,
         required : true,
         default: 1.0
     },
