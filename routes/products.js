@@ -1,11 +1,17 @@
 const express = require('express')
 const router = express.Router()
-const products = require('../models/products')
+const Products = require('../models/products')
 
 
 // Get all of products 
-router.get('/',(req,res) => {
-    res.send('hello world')
+router.get('/',async (req,res) => {
+    try {
+        const products = await Products.find()
+        res.json(products)
+    }
+    catch (err) {
+        res.status(500).json({message : err.message})
+    }
 })
 //get Product by id 
 router.get('/:id',(req,res) => {
