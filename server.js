@@ -16,9 +16,9 @@ db.once('open',(error) => console.log('connected to DB !!') )
 app.use(express.json())
 
 const productsRouter = require('./routes/products')
-app.use('/api/products',productsRouter)
+app.use('/',productsRouter)
 
 
 
 
-app.listen(3000, () => console.log("server has been started on port 3000 , dont worry !"))
+app.listen(3000, () => console.log("server has been started on port 3000 , yay !!!!!"))
