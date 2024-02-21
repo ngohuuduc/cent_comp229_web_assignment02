@@ -41,6 +41,7 @@ router.get('/api/products/:id', async (req, res) => {
             res.status(500).json({ message: err.message });      }
     }
 });
+
 // add 1 new product 
 router.post('/api/products/',async (req,res) => {
     const product = new Products({ 
@@ -117,7 +118,12 @@ router.delete('/api/products/', async (req, res) => {
         res.status(200).json({ message: 'All products have been deleted' }); 
     } catch (err) {
         res.status(500).json({ message: err.message }); 
+    }
 });
+
+
+
+// find product using name wildcard . 
 
 
 

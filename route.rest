@@ -5,33 +5,42 @@
 GET http://localhost:3000/api/products
 
 #### SEARCH PRODUCT with name
-GET http://localhost:3000/api/products?name=llo
+GET http://localhost:3000/api/products?name=3
 
 ### GET PRODUCT BY ID
-GET http://localhost:3000/api/products/65d59012556a8c8341c511b2
+GET http://localhost:3000/api/products/65d593ee7d545267a0eee189
 
 ###  ADD NEW PRODDUCT 
 POST http://localhost:3000/api/products
 Content-Type: application/json
 
 {
-    "product": "product 1 ",
-    "description": "test 1 ",
+    "product": "product 3 ",
+    "description": "test 3 ",
     "price": 25,
     "quantity": 80,
-    "category": "Home"
+    "category": "Office"
 }
 
 
 ### update PRODUCT by ID
-POST 
+PATCH http://localhost:3000/api/products/65d593ee7d545267a0eee189
+Content-Type: application/json
+
+{
+    "product": " NEW PRODUCT UPDATED",
+    "price": 25
+}
+
+### GET PRODUCT BY ID
+GET http://localhost:3000/api/products/65d593ee7d545267a0eee189
 
 
 ### DELETE PRODUCT BY ID
+DELETE http://localhost:3000/api/products/65d593ee7d545267a0eee189
 
 
-
-### DELETE ALL PRODUCZS 
+### DELETE ALL PRODUCTS
 DELETE http://localhost:3000/api/products
 
 
