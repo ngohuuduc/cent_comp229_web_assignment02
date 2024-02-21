@@ -1,27 +1,38 @@
 // url =mongodb+srv://ducngo:helloworld@cluster0.232lfkg.mongodb.net/Marketplace
 
 
-###
+### Get all PRODUCTS 
 GET http://localhost:3000/api/products
 
-###
-GET http://localhost:3000/api/products/65d549b4ade67753ef9c2509
+#### SEARCH PRODUCT with name
+GET http://localhost:3000/api/products?name=llo
 
-### 
+### GET PRODUCT BY ID
+GET http://localhost:3000/api/products/65d59012556a8c8341c511b2
+
+###  ADD NEW PRODDUCT 
 POST http://localhost:3000/api/products
 Content-Type: application/json
 
 {
-    "product": "test product2",
-    "description": "test description2",
+    "product": "product 1 ",
+    "description": "test 1 ",
     "price": 25,
     "quantity": 80,
     "category": "Home"
 }
-### 
 
 
-### Delete
-DELETE http://localhost:3000/api/products/65d549b4ade67753ef9c2509
+### update PRODUCT by ID
+POST 
 
-####
+
+### DELETE PRODUCT BY ID
+
+
+
+### DELETE ALL PRODUCZS 
+DELETE http://localhost:3000/api/products
+
+
+
