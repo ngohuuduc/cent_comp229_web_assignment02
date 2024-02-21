@@ -22,6 +22,7 @@ router.get('/api/products/:id',getProduct,(req,res) => {
 })
 
 
+
 // add 1 new product 
 router.post('/api/products/',async (req,res) => {
     const product = new Products({ 
@@ -54,7 +55,7 @@ router.patch('/api/products/:id',getProduct,(req,res) => {
 // remove product by id
 router.delete('/api/products/:id', getProduct, (req,res) => {
     try {
-        res.products.remove()
+        res.products.deleteOne()
         res.json({message: 'Delete the product successfully'})
     } catch (err) {
         return res.status(500).json({message: err.message})
@@ -66,7 +67,6 @@ router.delete('/api/products/:id', getProduct, (req,res) => {
 // remove all product 
 
 // find product using name wildcard . 
-
 
 
 async function getProduct(req,res, next) {
@@ -84,6 +84,5 @@ async function getProduct(req,res, next) {
     res.product = products 
     next()
 }
-
 
 module.exports = router 
